@@ -4,8 +4,10 @@ import sys
 
 import requests
 from datetime import datetime
-from .constants import ORCID_PUBLIC_BASE_URL
-from .utils import dictmapper, MappingRule as to
+from constants import ORCID_PUBLIC_BASE_URL
+# from .constants import ORCID_PUBLIC_BASE_URL
+from utils import dictmapper, MappingRule as to
+# from .utils import dictmapper, MappingRule as to
 from typing import Any, Dict, List, Optional, Iterator
 
 
