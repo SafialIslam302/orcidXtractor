@@ -3,8 +3,6 @@ __pycache__/*
 */Result/*
 Result
 Result/**
-.flake8
-*.ini
 .idea
 __pycache__
 *.log

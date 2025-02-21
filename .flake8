@@ -1,0 +1,8 @@
+[flake8]
+ignore = E501, W503
+max-line-length = 120
+exclude =
+    migrations,
+    __init__.py,
+    manage.py,
+    settings.py
