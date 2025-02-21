@@ -1,0 +1,7 @@
+requests>=1.0.4
+pandas~=2.0.3
+reportlab~=4.3.1
+openpyxl==3.1.5
+pytest==8.3.2
+coverage
+typing_extensions~=4.12.2
