@@ -1,5 +1,6 @@
 import csv
 import json
+import shutil
 import unittest
 import os
 from typing import List
@@ -79,7 +80,7 @@ class TestCreateTxt(unittest.TestCase):
         if os.path.exists(self.output_file_name):
             os.remove(self.output_file_name)
         if os.path.exists(self.output_dir):
-            os.rmdir(self.output_dir)
+            shutil.rmtree(self.output_dir)
 
 
 class TestCreatePdf(unittest.TestCase):
