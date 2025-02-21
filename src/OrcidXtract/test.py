@@ -7,7 +7,8 @@ from unittest.mock import MagicMock
 
 import pandas as pd
 
-from report_generator import create_txt, create_pdf, create_json, create_report
+from .report_generator import create_txt, create_pdf, create_json, create_report
+# from report_generator import create_txt, create_pdf, create_json, create_report
 
 
 class TestCreateTxt(unittest.TestCase):

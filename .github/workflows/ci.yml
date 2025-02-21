@@ -49,6 +49,7 @@ jobs:
     # Step 7: Run tests
     - name: Run tests with coverage
       run: |
+          export PYTHONPATH=$PYTHONPATH:${{ github.workspace }}/src
           coverage run -m pytest src/OrcidXtract/test.py  # Specify the exact path if necessary
           coverage report
           coverage html  # Generates an HTML report
