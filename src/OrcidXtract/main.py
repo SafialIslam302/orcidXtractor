@@ -2,8 +2,8 @@ import argparse
 import os
 import sys
 
-from .orcid_extractor import get_orcid_data
-from .report_generator import create_txt, create_pdf, create_json, create_report
+from orcid_extractor import get_orcid_data
+from report_generator import create_txt, create_pdf, create_json, create_report
 
 
 def parse_arguments() -> argparse.Namespace:
