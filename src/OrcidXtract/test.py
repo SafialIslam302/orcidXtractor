@@ -124,7 +124,7 @@ class TestCreatePdf(unittest.TestCase):
         if os.path.exists(self.output_file_name):
             os.remove(self.output_file_name)
         if os.path.exists(self.output_dir):
-            os.rmdir(self.output_dir)
+            shutil.rmtree(self.output_dir)
 
     def test_create_pdf_file_exists(self):
         """Test if the PDF file is successfully created."""
@@ -216,7 +216,7 @@ class TestCreateJson(unittest.TestCase):
         if os.path.exists(self.output_file_name):
             os.remove(self.output_file_name)
         if os.path.exists(self.output_dir):
-            os.rmdir(self.output_dir)
+            shutil.rmtree(self.output_dir)
 
     def test_create_json_file_exists(self):
         """Test if the JSON file is successfully created."""
@@ -366,7 +366,7 @@ class TestCreateReport(unittest.TestCase):
         if os.path.exists(excel_file):
             os.remove(excel_file)
         if os.path.exists(self.result_dir):
-            os.rmdir(self.result_dir)
+            shutil.rmtree(self.result_dir)
 
     def test_create_csv_report(self):
         """Test if the CSV report is generated correctly."""
