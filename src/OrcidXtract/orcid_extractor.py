@@ -1,6 +1,6 @@
 from typing import Optional, Any
 
-from . import restfull
+import restfull
 
 
 def get_orcid_data(orcid_id: str) -> Optional[Any]:
