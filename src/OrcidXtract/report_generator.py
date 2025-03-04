@@ -532,7 +532,10 @@ def create_txt(output_file_name: str, orcid_res: Any) -> None:
                 # Extract and write start year
                 start_date = education_summary.get('start-date', {})
                 start_year = start_date.get('year', {}).get('value', 'Unknown Year') if start_date else None
-                output.writelines("Education Start Year: " + start_year + "\n")
+                if start_year:
+                    output.writelines("Education Start Year: " + start_year + "\n")
+                else:
+                    output.writelines("Education Start Year: Not Found.\n")
 
                 # Extract and write end year
                 end_date = education_summary.get('end-date', {})
