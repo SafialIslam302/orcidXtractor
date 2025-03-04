@@ -345,7 +345,7 @@ def create_pdf(output_file_name: str, orcid_res: Any) -> None:
         funding_summaries = funding.get("funding-summary", [])
         for summary in funding_summaries:
             # Use if conditions to safely access each attribute
-            funding_source = summary.get("source", {}).get("source-name", {}).get("value") if summary.get("source",{}).get("source-name") else "N/A"
+            funding_source = summary.get("source", {}).get("source-name", {}).get("value") if summary.get("source", {}).get("source-name") else "N/A"
             funding_title = summary.get("title", {}).get("title", {}).get("value") if summary.get("title") else "N/A"
             funding_type = summary.get("type") if summary.get("type") else "N/A"
 

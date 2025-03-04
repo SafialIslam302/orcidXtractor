@@ -80,9 +80,9 @@ def main() -> None:
             print(f"End processing ORCID ID: {orcid_res.orcid}")
 
     if args.report:
-        print(f"Start creating report.")
+        print("Start creating report.")
         create_report(orcid_data, args.report)
-        print(f"End creating report.")
+        print("End creating report.")
 
 
 if __name__ == "__main__":
