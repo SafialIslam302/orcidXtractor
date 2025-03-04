@@ -499,8 +499,11 @@ def create_txt(output_file_name: str, orcid_res: Any) -> None:
 
                 # Extract and write start year
                 start_date = employment_summary.get('start-date', {})
-                start_year = start_date.get('year', {}).get('value', 'Unknown Year')
-                output.writelines("Employment Start Year: " + start_year + "\n")
+                start_year = start_date.get('year', {}).get('value', 'Unknown Year') if start_date else None
+                if start_year:
+                    output.writelines("Employment Start Year: " + start_year + "\n")
+                else:
+                    output.writelines("Employment Start Year: Not Found.\n")
 
                 output.writelines("\n")
         output.writelines("\n\n")
