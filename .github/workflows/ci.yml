@@ -44,9 +44,9 @@ jobs:
     # Step 6: Run your Python script (main.py or any other script)
     - name: Run Python Script
       run: |
-        python src/OrcidXtract/main.py --orcid_ids 0000-0002-0970-0455 --output-format txt pdf json --report csv 
+        python src/OrcidXtract/main.py --inputfile ./input.txt --output-format txt pdf json --report csv --output-dir ./results  
 
-    # Step 7: Run tests
+      # Step 7: Run tests
     - name: Run tests with coverage
       run: |
           export PYTHONPATH=$PYTHONPATH:${{ github.workspace }}/src
