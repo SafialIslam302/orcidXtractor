@@ -121,18 +121,17 @@ def convert_timestamp(timestamp: Optional[int]) -> str:
 
 
 AuthorBase = dictmapper('AuthorBase', {
-    #  'orcid'            :['orcid-profile','orcid-identifier','path'],
     'orcid': ['orcid-identifier', 'path'],
     'family_name': ['person', 'name', 'family-name', 'value'],
     'given_name': ['person', 'name', 'given-names', 'value'],
     'biography': ['person', 'biography', 'content'],
     'keywords': ['person', 'keywords'],
     'researcher_urls': ['person', 'researcher-urls', 'researcher-url'],
-    'educations': ['activities-summary', 'educations', 'education-summary'],
-    'employments': ['activities-summary', 'employments', 'employment-summary'],
-    'last_modify_date':
-        to(['history', 'last-modified-date', 'value'],
-           convert_timestamp)
+    'educations': ['activities-summary', 'educations', 'affiliation-group'],
+    'employments': ['activities-summary', 'employments', 'affiliation-group'],
+    'last_modify_date': to(['history', 'last-modified-date', 'value'], convert_timestamp),
+    'peer_reviews': ['activities-summary', 'peer-reviews', 'group'],
+    'fundings': ['activities-summary', 'fundings', 'group']
 })
 
 Works = dictmapper('Works', {
@@ -198,6 +197,29 @@ class Author(AuthorBase):
         if self._loaded_works is None:
             self._load_works()
         return self._loaded_works.publications
+
+    @property
+    def peer_review_activities(self) -> List[str]:
+        """
+        This method searches for peer review activity information from works or any other section.
+
+        Returns:
+            List[str]: A list of journal names and review counts.
+        """
+        review_activities = []
+
+        # Search through the 'works' section (or any relevant section like 'activities')
+        if hasattr(self, "_loaded_works") and self._loaded_works:
+            for work in self._loaded_works.publications:
+                # Check if 'review-activity' exists in the work (you'll need to adapt based on actual ORCID structure)
+                if 'review-activity' in work:
+                    journal_name = work.get('journal-title', {}).get('value', 'Unknown')
+                    number_of_reviews = work.get('review-count', 0)
+
+                    # Format the review activity string
+                    review_activities.append(f"Review Activity for {journal_name} ({number_of_reviews} reviews)")
+
+        return review_activities
 
     @property
     def affiliations(self) -> List[Any]:

@@ -61,12 +61,10 @@ def main() -> None:
     orcid_data = []
     for orcid_id in orcid_ids:
         orcid_res = get_orcid_data(orcid_id)
-        if orcid_res is not None:
-            orcid_data.append(orcid_res)
+        orcid_data.append(orcid_res)
 
-            if args.output_format:
-                print(f"Start processing ORCID ID: {orcid_res.orcid}")
-
+        if args.output_format:
+            print(f"Start processing ORCID ID: {orcid_res.orcid}")
             if 'txt' in args.output_format:
                 output_file_name = os.path.join(result_dir, f"{orcid_id}.txt")
                 create_txt(output_file_name, orcid_res)
@@ -82,9 +80,9 @@ def main() -> None:
             print(f"End processing ORCID ID: {orcid_res.orcid}")
 
     if args.report:
-        print("Start creating report.")
+        print(f"Start creating report.")
         create_report(orcid_data, args.report)
-        print("End creating report.")
+        print(f"End creating report.")
 
 
 if __name__ == "__main__":
