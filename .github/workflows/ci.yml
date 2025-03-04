@@ -45,8 +45,16 @@ jobs:
     - name: Run Python Script
       run: |
         python src/OrcidXtract/main.py --inputfile ./input.txt --output-format txt pdf json --report csv
-        mkdir -p results
-        mv *.txt *.pdf *.json *.csv results/ 2>/dev/null || true
+
+    - name: Save Output Files
+      uses: actions/upload-artifact@v4
+      with:
+        name: extracted-results
+        path: |
+          *.txt
+          *.pdf
+          *.json
+          *.csv
 
       # Step 7: Run tests
     - name: Run tests with coverage
