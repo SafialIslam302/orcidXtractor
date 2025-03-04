@@ -46,15 +46,12 @@ jobs:
       run: |
         python src/OrcidXtract/main.py --inputfile ./input.txt --output-format txt pdf json --report csv
 
-    - name: Save Output Files
+    - name: Upload Results as Artifact
       uses: actions/upload-artifact@v4
       with:
         name: extracted-results
-        path: |
-          *.txt
-          *.pdf
-          *.json
-          *.csv
+        path: Result/
+        retention-days: 7
 
       # Step 7: Run tests
     - name: Run tests with coverage
