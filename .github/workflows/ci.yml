@@ -44,7 +44,9 @@ jobs:
     # Step 6: Run your Python script (main.py or any other script)
     - name: Run Python Script
       run: |
-        python src/OrcidXtract/main.py --inputfile ./input.txt --output-format txt pdf json --report csv --output-dir ./results  
+        python src/OrcidXtract/main.py --inputfile ./input.txt --output-format txt pdf json --report csv
+        mkdir -p results
+        mv *.txt *.pdf *.json *.csv results/ 2>/dev/null || true
 
       # Step 7: Run tests
     - name: Run tests with coverage
