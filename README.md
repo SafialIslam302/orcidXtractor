@@ -6,11 +6,11 @@
 [![License: MIT](https://img.shields.io/github/license/SafialIslam302/orcidXtractor)](https://github.com/SafialIslam302/orcidXtractor/blob/master/LICENSE.txt)
 [![Issues](https://img.shields.io/github/issues/SafialIslam302/orcidXtractor)](https://github.com/SafialIslam302/orcidXtractor/issues)
 [![Pull Requests](https://img.shields.io/github/issues-pr/SafialIslam302/orcidXtractor)](https://github.com/SafialIslam302/orcidXtractor/pulls)
-[![PyPI version](https://img.shields.io/pypi/v/orcidXtractor.svg)](https://pypi.org/project/orcidXtractor/)
-[![PyPI downloads](https://img.shields.io/pypi/dm/orcidXtractor.svg)](https://pypi.org/project/orcidXtractor/)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/orcidXtractor.svg)](https://pypi.org/project/orcidXtractor/)
-[![PyPI - Wheel](https://img.shields.io/pypi/wheel/orcidXtractor.svg)](https://pypi.org/project/orcidXtractor/)
-[![PyPI - License](https://img.shields.io/pypi/l/orcidXtractor.svg)](https://github.com/SafialIslam302/orcidXtractor/blob/main/LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/orcidXtractor.svg)](https://pypi.org/project/OrcidXtractor/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/orcidXtractor.svg)](https://pypi.org/project/OrcidXtractor/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/orcidXtractor.svg)](https://pypi.org/project/OrcidXtractor/)
+[![PyPI - Wheel](https://img.shields.io/pypi/wheel/orcidXtractor.svg)](https://pypi.org/project/OrcidXtractor/)
+[![PyPI - License](https://img.shields.io/pypi/l/orcidXtractor.svg)](https://github.com/SafialIslam302/OrcidXtractor/blob/main/LICENSE)
 
 This Python script extracts ORCID information from a file containing ORCID IDs and generates reports in various formats (TXT, PDF, JSON, CSV, Excel).
 
