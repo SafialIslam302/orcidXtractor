@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/python-3.9-blue.svg)
 [![PyPI version](https://badge.fury.io/py/your-package-name.svg)](https://pypi.org/project/OrcidXtract/)
 [![GitHub repo status](https://img.shields.io/badge/status-maintained-brightgreen.svg)](#)
-[![License: MIT](https://img.shields.io/github/license/SafialIslam302/orcidXtractor)](https://github.com/SafialIslam302/orcidXtractor/master/LICENSE.txt)
+[![License: MIT](https://img.shields.io/github/license/SafialIslam302/orcidXtractor)](https://github.com/SafialIslam302/orcidXtractor/blob/master/LICENSE.txt)
 
 This Python script extracts ORCID information from a file containing ORCID IDs and generates reports in various formats (TXT, PDF, JSON, CSV, Excel).
 
